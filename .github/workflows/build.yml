@@ -20,13 +20,12 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run package
-      - run: npm run package:msix
       - uses: actions/upload-artifact@v4
         with:
           name: radiosync-desktop-windows
           path: |
-            dist/*.exe
-            dist/*.msix
+            dist/nsis/*.exe
+            dist/nsis/*.nupkg
 
   linux:
     runs-on: ubuntu-latest
