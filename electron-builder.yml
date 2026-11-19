@@ -1,0 +1,24 @@
+appId: com.radiosync.desktop
+productName: RadioSync Desktop
+directories:
+  buildResources: resources
+  output: dist
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.ts'
+  - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+win:
+  executableName: radiosync-desktop
+  icon: resources/icon.png
+  target:
+    - nsis
+    - portable
+nsis:
+  artifactName: ${name}-${version}-setup.${ext}
+  shortcutName: RadioSync Desktop
+  uninstallDisplayName: RadioSync Desktop
+  createDesktopShortcut: always
+portable:
+  artifactName: ${name}-${version}-portable.${ext}

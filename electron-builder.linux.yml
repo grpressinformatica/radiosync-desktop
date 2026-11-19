@@ -1,0 +1,17 @@
+extends: ./electron-builder.yml
+directories:
+  buildResources: resources
+  output: dist/linux
+files:
+  - out/**/*
+  - package.json
+linux:
+  target:
+    - AppImage
+    - deb
+  executableName: radiosync-desktop
+  icon: resources/icon.png
+  category: AudioVideo
+  synopsis: Cadastro de ouvintes, promoções e sorteios para emissoras
+  maintainer: UaiHost <suporte@uaihost.com.br>
+  artifactName: ${name}-${version}-${arch}.${ext}
