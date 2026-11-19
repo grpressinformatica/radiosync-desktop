@@ -7,7 +7,7 @@
     "dev": "electron-vite dev",
     "build": "electron-vite build",
     "preview": "electron-vite preview",
-    "package": "electron-builder --win --config electron-builder.yml",
+    "package": "electron-builder --win --config electron-builder.yml --publish never",
     "test:portable": "node scripts/test-portable.cjs",
     "test:endereco-ui": "node scripts/test-endereco-ui.cjs",
     "package:linux": "npm run build && electron-builder --linux AppImage deb --x64 --config electron-builder.linux.yml --publish never"
