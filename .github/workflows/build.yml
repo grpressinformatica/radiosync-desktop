@@ -20,15 +20,13 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run package
-        env:
-          # WindowsKit para MSIX
-          WINDOWS_KIT_VERSION: 10.0.26100.0
+      - run: npm run package:msix
       - uses: actions/upload-artifact@v4
         with:
           name: radiosync-desktop-windows
           path: |
-            dist/nsis/*.exe
-            dist/msix/**/*.msix
+            dist/*.exe
+            dist/*.msix
 
   linux:
     runs-on: ubuntu-latest
