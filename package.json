@@ -2,14 +2,13 @@
   "name": "radiosync-desktop",
   "version": "1.4.0",
   "description": "RadioSync Desktop - Cadastro de Ouvintes e Promoções/Sorteios (offline)",
-  "main": "./out/main/index.js",
+  "main": "./.output/main/index.js",
   "scripts": {
     "dev": "electron-vite dev",
     "build": "electron-vite build",
     "preview": "electron-vite preview",
-    "package": "electron-builder --win --config electron-builder.yml --publish never",
-    "test:portable": "node scripts/test-portable.cjs",
-    "test:endereco-ui": "node scripts/test-endereco-ui.cjs",
+    "package": "npm run build && npx electron-forge make --platform win32",
+    "package:msix": "npm run build && npx electron-forge make --platform win32 --arch x64 --config forge.config.js",
     "package:linux": "npm run build && electron-builder --linux AppImage deb --x64 --config electron-builder.linux.yml --publish never"
   },
   "dependencies": {
@@ -30,6 +29,10 @@
     "zod": "^3.24.0"
   },
   "devDependencies": {
+    "@electron-forge/cli": "^8.0.1",
+    "@electron-forge/maker-msix": "^8.0.1",
+    "@electron-forge/maker-squirrel": "^8.0.1",
+    "@electron-forge/maker-zip": "^8.0.1",
     "@tailwindcss/vite": "^4.0.0",
     "@types/papaparse": "^5.3.15",
     "@types/react": "^19.0.0",

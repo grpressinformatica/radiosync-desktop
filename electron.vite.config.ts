@@ -5,10 +5,16 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   main: {
-    plugins: [externalizeDepsPlugin()]
+    plugins: [externalizeDepsPlugin()],
+    build: {
+      outDir: '.output/main',
+    },
   },
   preload: {
-    plugins: [externalizeDepsPlugin()]
+    plugins: [externalizeDepsPlugin()],
+    build: {
+      outDir: '.output/preload',
+    },
   },
   renderer: {
     resolve: {
@@ -16,6 +22,9 @@ export default defineConfig({
         '@': resolve('src/renderer')
       }
     },
-    plugins: [react(), tailwindcss()]
+    plugins: [react(), tailwindcss()],
+    build: {
+      outDir: '.output/renderer',
+    },
   }
 })
