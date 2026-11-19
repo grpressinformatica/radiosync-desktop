@@ -1,7 +1,13 @@
 #!/bin/bash
+# Compila os artefatos Linux (AppImage e .deb) a partir do código.
+# Pode ser executado no WSL, num container ou numa máquina Linux comum.
+# Uso: bash build-linux.sh [caminho-do-projeto]
 set -euo pipefail
-src='/mnt/d/20-radiosync/Radiosync Desktop'
-w=$(mktemp -d "$HOME/radiosync-build.XXXXXXXX")
+
+src="${1:-$(cd "$(dirname "$0")" && pwd)}"
+src="$(cd "$src" && pwd)"
+
+w=$(mktemp -d "${TMPDIR:-/tmp}/radiosync-build.XXXXXXXX")
 echo "Workspace: $w"
 cd "$w"
 mkdir tools project
