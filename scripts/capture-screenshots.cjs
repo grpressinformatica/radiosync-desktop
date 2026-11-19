@@ -13,11 +13,11 @@ const iso = (d) => d.toISOString().slice(0, 10);
 const daqui = (dias) => { const d = new Date(); d.setDate(d.getDate() + dias); return iso(d); };
 
 const ouvintes = [
-  { id: 1, nome: 'Maria Silva Santos', telefone: '(31) 98765-4321', cpf: '123.456.789-00', data_nascimento: `${agora.getFullYear() - 33}-${String(agora.getMonth() + 1).padStart(2, '0')}-10`, cep: '30130-000', endereco: 'Rua da Bahia', numero: '150', bairro: 'Centro', cidade: 'Belo Horizonte', uf: 'MG' },
-  { id: 2, nome: 'João Pedro Oliveira', telefone: '(35) 99749-3435', cpf: '987.654.321-00', data_nascimento: '1988-07-22', cep: '37800-000', endereco: 'Av. Doutor Paulino Couto', numero: '820', bairro: 'Centro', cidade: 'Arcos', uf: 'MG' },
-  { id: 3, nome: 'Ana Carolina Ferreira', telefone: '(35) 99123-4567', cpf: '', data_nascimento: '1995-11-03', cep: '37900-000', endereco: 'Rua São Paulo', numero: '45', bairro: 'Vila Nova', cidade: 'São Sebastião do Paraíso', uf: 'MG' },
-  { id: 4, nome: 'Carlos Eduardo Ramos', telefone: '(35) 98456-7890', cpf: '456.789.123-00', data_nascimento: '1979-02-18', cep: '37800-000', endereco: 'Rua Leopoldino de Faria', numero: '310', bairro: 'Centro', cidade: 'Arcos', uf: 'MG' },
-  { id: 5, nome: 'Beatriz Nogueira Lima', telefone: '(35) 97777-8888', cpf: '', data_nascimento: '2001-05-28', cep: '37900-000', endereco: 'Av. Getúlio Vargas', numero: '1200', bairro: 'Centro', cidade: 'São Sebastião do Paraíso', uf: 'MG' },
+  { id: 1, nome: 'Fulano de Tal', telefone: '(**) *****-0001', cpf: '***.***.***-**', data_nascimento: `${agora.getFullYear() - 33}-${String(agora.getMonth() + 1).padStart(2, '0')}-10`, cep: '01001-000', endereco: 'Rua Exemplo', numero: '100', bairro: 'Centro', cidade: 'São Paulo', uf: 'SP' },
+  { id: 2, nome: 'Ciclana de Tal', telefone: '(**) *****-0002', cpf: '***.***.***-**', data_nascimento: '1988-07-22', cep: '01002-000', endereco: 'Av. Fictícia', numero: '200', bairro: 'Centro', cidade: 'São Paulo', uf: 'SP' },
+  { id: 3, nome: 'Beltrano Silva', telefone: '(**) *****-0003', cpf: '', data_nascimento: '1995-11-03', cep: '01003-000', endereco: 'Rua Ilustrativa', numero: '300', bairro: 'Vila Demo', cidade: 'Guarulhos', uf: 'SP' },
+  { id: 4, nome: 'Fulana Souza', telefone: '(**) *****-0004', cpf: '***.***.***-**', data_nascimento: '1979-02-18', cep: '01001-000', endereco: 'Rua Exemplo', numero: '400', bairro: 'Centro', cidade: 'São Paulo', uf: 'SP' },
+  { id: 5, nome: 'Ciclano Pereira', telefone: '(**) *****-0005', cpf: '', data_nascimento: '2001-05-28', cep: '01003-000', endereco: 'Av. Fictícia', numero: '500', bairro: 'Vila Demo', cidade: 'Guarulhos', uf: 'SP' },
 ];
 
 const promocoes = [
@@ -27,16 +27,16 @@ const promocoes = [
 ];
 
 const participacoes = [
-  { id: 1, nome: 'Maria Silva Santos', promocao: 'Prêmio Pão de Açúcar', musica: 'Evidências', mensagem: 'Dedico essa música para toda a família!', data: `${agora.toISOString().slice(0, 10)} 08:14:00`, lida: 0, id_promocao: 1 },
-  { id: 2, nome: 'João Pedro Oliveira', promocao: 'Prêmio Pão de Açúcar', musica: 'Ovo de Pinhocho', mensagem: '', data: `${agora.toISOString().slice(0, 10)} 09:02:00`, lida: 0, id_promocao: 1 },
-  { id: 3, nome: 'Ana Carolina Ferreira', promocao: 'Show de Música Gospel', musica: 'Prezendo a Deus', mensagem: 'Que Deus abençoe essa rádio!', data: `${agora.toISOString().slice(0, 10)} 07:45:00`, lida: 1, id_promocao: 2 },
-  { id: 4, nome: 'Carlos Eduardo Ramos', promocao: 'Festival Junino 2026', musica: 'Quadrinha', mensagem: 'Arraiá da emits!', data: `${agora.toISOString().slice(0, 10)} 06:30:00`, lida: 0, id_promocao: 3 },
-  { id: 5, nome: 'Beatriz Nogueira Lima', promocao: null, musica: 'Mais uma vez', mensagem: 'Bom dia, queropared', data: `${agora.toISOString().slice(0, 10)} 10:20:00`, lida: 0, id_promocao: null },
+  { id: 1, nome: 'Fulano de Tal', promocao: 'Prêmio Pão de Açúcar', musica: 'Evidências', mensagem: 'Dedico essa música para toda a família!', data: `${agora.toISOString().slice(0, 10)} 08:14:00`, lida: 0, id_promocao: 1 },
+  { id: 2, nome: 'Ciclana de Tal', promocao: 'Prêmio Pão de Açúcar', musica: 'Música Exemplo', mensagem: '', data: `${agora.toISOString().slice(0, 10)} 09:02:00`, lida: 0, id_promocao: 1 },
+  { id: 3, nome: 'Beltrano Silva', promocao: 'Show de Música Gospel', musica: 'Canção Fictícia', mensagem: 'Um abraço para todos os ouvintes!', data: `${agora.toISOString().slice(0, 10)} 07:45:00`, lida: 1, id_promocao: 2 },
+  { id: 4, nome: 'Fulana Souza', promocao: 'Festival Junino 2026', musica: 'Quadrinha', mensagem: 'Arraiá da rádio!', data: `${agora.toISOString().slice(0, 10)} 06:30:00`, lida: 0, id_promocao: 3 },
+  { id: 5, nome: 'Ciclano Pereira', promocao: null, musica: 'Mais uma vez', mensagem: 'Bom dia, ótima programação!', data: `${agora.toISOString().slice(0, 10)} 10:20:00`, lida: 0, id_promocao: null },
 ];
 
 const ganhadores = [
-  { id: 1, nome: 'Carlos Eduardo Ramos', promocao: 'Festival Junino 2026', data_sorteio: `${agora.toISOString().slice(0, 10)} 11:00:00`, id_promocao: 3, telefone: '(35) 98456-7890' },
-  { id: 2, nome: 'Ana Carolina Ferreira', promocao: 'Show de Música Gospel', data_sorteio: `${agora.toISOString().slice(0, 10)} 12:30:00`, id_promocao: 2, telefone: '(35) 99123-4567' },
+  { id: 1, nome: 'Fulana Souza', promocao: 'Festival Junino 2026', data_sorteio: `${agora.toISOString().slice(0, 10)} 11:00:00`, id_promocao: 3, telefone: '(**) *****-0004' },
+  { id: 2, nome: 'Beltrano Silva', promocao: 'Show de Música Gospel', data_sorteio: `${agora.toISOString().slice(0, 10)} 12:30:00`, id_promocao: 2, telefone: '(**) *****-0003' },
 ];
 
 function mockApi(dados) {
@@ -44,8 +44,8 @@ function mockApi(dados) {
   const api = {
     dashboardStats: async () => ({ ouvintes: 1287, promocoes: 2, pendentes: 3, ganhadores: 2 }),
     dashboardAniversariantes: async () => [
-      { nome: 'Maria Silva Santos', telefone: '(31) 98765-4321' },
-      { nome: 'João Pedro Oliveira', telefone: '(35) 99749-3435' },
+      { nome: 'Fulano de Tal', telefone: '(**) *****-0001' },
+      { nome: 'Ciclana de Tal', telefone: '(**) *****-0002' },
     ],
     dashboardPromocoesAtivas: async () => [
       { nome: 'Prêmio Pão de Açúcar', dias: 6 },
