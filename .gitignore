@@ -40,3 +40,6 @@ Thumbs.db
 
 # Claude Code (local)
 .claude/
+
+# TypeScript incremental
+*.tsbuildinfo
