@@ -15,7 +15,6 @@ win:
   target:
     - nsis
     - portable
-    - msix
   signAndEditExecutable: false
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
@@ -24,10 +23,3 @@ nsis:
   createDesktopShortcut: always
 portable:
   artifactName: ${name}-${version}-portable.${ext}
-msix:
-  artifactName: ${name}-${version}-win32-x64.${ext}
-  displayName: RadioSync Desktop
-  publisherDisplayName: UaiHost
-  identityName: com.radiosync.desktop
-  publisher: CN=UaiHost
-  addDesktopAppExtension: true
