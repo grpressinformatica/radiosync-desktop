@@ -3,7 +3,7 @@ directories:
   buildResources: resources
   output: dist/linux
 files:
-  - out/**/*
+  - .output/**/*
   - package.json
 linux:
   target:
